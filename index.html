@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ALAT TULIS KANTOR DICKY</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            <span>ATK</span> DICKY
+        </div>
+
+        <nav>
+            <a href="#home">Beranda</a>
+            <a href="#produk">Produk</a>
+            <a href="#tentang">Tentang</a>
+        </nav>
+
+        <button class="cart-btn" onclick="bukaKeranjang()">
+            🛒 Keranjang
+            <span id="jumlahKeranjang">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="welcome">
+                SELAMAT DATANG DI TOKO KAMI
+            </p>
+
+            <h1>
+                ALAT TULIS<br>
+                KANTOR DICKY
+            </h1>
+
+            <p class="hero-description">
+                Semua kebutuhan alat tulis dan perlengkapan
+                kantor dalam satu tempat.
+            </p>
+
+            <a href="#produk" class="hero-btn">
+                Lihat Produk
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- KATEGORI -->
+    <section class="kategori">
+
+        <div class="section-heading">
+            <p>KATEGORI</p>
+            <h2>Pilih Kebutuhanmu</h2>
+        </div>
+
+
+        <div class="kategori-container">
+
+            <button onclick="filterProduk('semua')">
+                📦
+                <span>Semua</span>
+            </button>
+
+            <button onclick="filterProduk('alat-tulis')">
+                ✏️
+                <span>Alat Tulis</span>
+            </button>
+
+            <button onclick="filterProduk('buku')">
+                📚
+                <span>Buku</span>
+            </button>
+
+            <button onclick="filterProduk('kertas')">
+                📄
+                <span>Kertas</span>
+            </button>
+
+            <button onclick="filterProduk('kantor')">
+                🗂️
+                <span>Perlengkapan Kantor</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUK -->
+    <section class="produk" id="produk">
+
+        <div class="section-heading">
+
+            <p>PRODUK KAMI</p>
+
+            <h2>Belanja Sekarang</h2>
+
+        </div>
+
+
+        <!-- SEARCH -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔎 Cari produk..."
+                onkeyup="cariProduk()"
+            >
+
+        </div>
+
+
+        <!-- DAFTAR PRODUK -->
+        <div class="produk-container" id="produkContainer">
+
+
+            <!-- PRODUK 1 -->
+           <div class="produk-image">
+    <img src="images/pensil.jpg" alt="Pensil 2B">
+</div>
+
+                <div class="produk-info">
+
+                    <span class="kategori-label">
+                        Alat Tulis
+                    </span>
+
+                    <h3>Pensil 2B</h3>
+
+                    <p class="harga">
+                        Rp 3.000
+                    </p>
+
+                    <button
+                        onclick="tambahKeranjang('Pensil 2B', 3000)"
+                    >
+                        + Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 2 -->
+            <div class="produk-image">
+    <img src="images/pulpen.jpg" alt="Pulpen Hitam">
+</div>
+                <div class="produk-info">
+
+                    <span class="kategori-label">
+                        Alat Tulis
+                    </span>
+
+                    <h3>Pulpen Hitam</h3>
+
+                    <p class="harga">
+                        Rp 4.000
+                    </p>
+
+                    <button
+                        onclick="tambahKeranjang('Pulpen Hitam', 4000)"
+                    >
+                        + Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 3 -->
+           <div class="produk-image">
+    <img src="images/buku.jpg" alt="Buku Tulis">
+</div>
+                <div class="produk-info">
+
+                    <span class="kategori-label">
+                        Buku
+                    </span>
+
+                    <h3>Buku Tulis</h3>
+
+                    <p class="harga">
+                        Rp 8.000
+                    </p>
+
+                    <button
+                        onclick="tambahKeranjang('Buku Tulis', 8000)"
+                    >
+                        + Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 4 -->
+           <div class="produk-image">
+    <img src="images/kertas.jpg" alt="Kertas A4">
+</div>
+
+                <div class="produk-info">
+
+                    <span class="kategori-label">
+                        Kertas
+                    </span>
+
+                    <h3>Kertas A4</h3>
+
+                    <p class="harga">
+                        Rp 55.000
+                    </p>
+
+                    <button
+                        onclick="tambahKeranjang('Kertas A4', 55000)"
+                    >
+                        + Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 5 -->
+           <div class="produk-image">
+    <img src="images/paperclip.jpg" alt="Paper Clip">
+</div>
+
+                <div class="produk-info">
+
+                    <span class="kategori-label">
+                        Perlengkapan Kantor
+                    </span>
+
+                    <h3>Paper Clip</h3>
+
+                    <p class="harga">
+                        Rp 5.000
+                    </p>
+
+                    <button
+                        onclick="tambahKeranjang('Paper Clip', 5000)"
+                    >
+                        + Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 6 -->
+           <div class="produk-image">
+    <img src="images/map.jpg" alt="Map Folder">
+</div>
+
+                <div class="produk-info">
+
+                    <span class="kategori-label">
+                        Perlengkapan Kantor
+                    </span>
+
+                    <h3>Map Folder</h3>
+
+                    <p class="harga">
+                        Rp 6.000
+                    </p>
+
+                    <button
+                        onclick="tambahKeranjang('Map Folder', 6000)"
+                    >
+                        + Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TENTANG -->
+    <section class="tentang" id="tentang">
+
+        <div>
+
+            <p>TENTANG KAMI</p>
+
+            <h2>
+                Kebutuhan ATK Jadi Lebih Mudah
+            </h2>
+
+            <p>
+                ALAT TULIS KANTOR DICKY menyediakan berbagai
+                macam alat tulis dan perlengkapan kantor
+                untuk sekolah, mahasiswa, kantor, dan kebutuhan
+                sehari-hari.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MODAL KERANJANG -->
+    <div
+        class="cart-modal"
+        id="cartModal"
+    >
+
+        <div class="cart-content">
+
+            <button
+                class="close-cart"
+                onclick="tutupKeranjang()"
+            >
+                ✕
+            </button>
+
+            <h2>🛒 Keranjang Belanja</h2>
+
+            <div id="isiKeranjang">
+
+                <p class="keranjang-kosong">
+                    Keranjang masih kosong.
+                </p>
+
+            </div>
+
+            <div class="cart-total">
+
+                <span>Total</span>
+
+                <strong id="totalHarga">
+                    Rp 0
+                </strong>
+
+            </div>
+
+            <div class="checkout-form">
+
+    <h3>Data Pembeli</h3>
+
+    <input
+        type="text"
+        id="namaPembeli"
+        placeholder="Nama lengkap"
+    >
+
+    <input
+        type="tel"
+        id="nomorPembeli"
+        placeholder="Nomor WhatsApp"
+    >
+
+    <textarea
+        id="alamatPembeli"
+        placeholder="Alamat lengkap"
+        rows="4"
+    ></textarea>
+
+    <button
+        class="checkout-btn"
+        onclick="checkout()"
+    >
+        📲 Checkout via WhatsApp
+    </button>
+
+</div>
+    
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>ALAT TULIS KANTOR DICKY</h3>
+
+        <p>
+            Toko alat tulis dan perlengkapan kantor.
+        </p>
+
+        <small>
+            © 2026 ATK DICKY
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,765 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+    height: 72px;
+    padding: 0 7%;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.07);
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #172033;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+.cart-btn {
+    border: none;
+    background: #172033;
+    color: white;
+
+    padding: 11px 17px;
+    border-radius: 9px;
+
+    cursor: pointer;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.cart-btn:hover {
+    transform: translateY(-2px);
+}
+
+#jumlahKeranjang {
+    background: #2563eb;
+    padding: 2px 6px;
+    border-radius: 20px;
+    margin-left: 4px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 530px;
+
+    padding: 80px 7%;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(37, 99, 235, 0.16),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #eef5ff,
+            #ffffff
+        );
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.welcome {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1;
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 560px;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #64748b;
+
+    margin-bottom: 32px;
+}
+
+.hero-btn {
+    display: inline-block;
+
+    background: #2563eb;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 24px;
+
+    border-radius: 9px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.section-heading p {
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+}
+
+
+/* =========================
+   KATEGORI
+========================= */
+
+.kategori {
+    padding: 80px 7%;
+    background: white;
+}
+
+.kategori-container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+.kategori-container button {
+    border: 1px solid #e5e7eb;
+
+    background: #ffffff;
+
+    padding: 20px 10px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 10px;
+
+    font-size: 28px;
+
+    transition: 0.3s;
+}
+
+.kategori-container button span {
+    font-size: 13px;
+    font-weight: 700;
+    color: #172033;
+}
+
+.kategori-container button:hover {
+    border-color: #2563eb;
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================
+   PRODUK
+========================= */
+
+.produk {
+    padding: 90px 7%;
+}
+
+.search-box {
+    max-width: 600px;
+
+    margin: 0 auto 45px;
+}
+
+.search-box input {
+    width: 100%;
+
+    padding: 16px 20px;
+
+    border: 1px solid #dbe1ea;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    background: white;
+
+    transition: 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.produk-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.produk-card {
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+
+    transition: 0.3s;
+}
+
+.produk-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+.produk-image {
+    height: 190px;
+    background: #f1f5f9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.produk-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 15px;
+
+    transition: 0.3s;
+}
+
+.produk-card:hover .produk-image img {
+    transform: scale(1.05);
+}
+
+.produk-info {
+    padding: 20px;
+}
+
+.kategori-label {
+    font-size: 11px;
+
+    color: #2563eb;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+.produk-info h3 {
+    margin: 8px 0;
+
+    font-size: 18px;
+}
+
+.harga {
+    font-size: 18px;
+
+    font-weight: 800;
+
+    margin-bottom: 17px;
+}
+
+.produk-info button {
+    width: 100%;
+
+    border: none;
+
+    background: #172033;
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.produk-info button:hover {
+    background: #2563eb;
+}
+
+
+/* =========================
+   TENTANG
+========================= */
+
+.tentang {
+    padding: 90px 7%;
+
+    background: white;
+
+    text-align: center;
+}
+
+.tentang > div {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.tentang > div > p:first-child {
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.tentang h2 {
+    font-size: 34px;
+
+    margin-bottom: 18px;
+}
+
+.tentang p:last-child {
+    color: #64748b;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   MODAL KERANJANG
+========================= */
+
+.cart-modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2000;
+
+    padding: 20px;
+}
+
+.cart-modal.active {
+    display: flex;
+}
+
+.cart-content {
+    width: 100%;
+    max-width: 500px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    position: relative;
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+}
+
+.close-cart {
+    position: absolute;
+
+    right: 20px;
+    top: 18px;
+
+    border: none;
+
+    background: #f1f5f9;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.cart-content h2 {
+    margin-bottom: 25px;
+}
+
+.keranjang-kosong {
+    text-align: center;
+
+    color: #94a3b8;
+
+    padding: 30px 0;
+}
+
+.cart-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.cart-item h4 {
+    margin-bottom: 5px;
+}
+
+.cart-item p {
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.hapus-item {
+    border: none;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    padding: 7px 10px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+.cart-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 2px solid #e5e7eb;
+
+    font-size: 18px;
+}
+
+.checkout-btn {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #172033;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #cbd5e1;
+
+    margin-bottom: 15px;
+}
+
+footer small {
+    color: #94a3b8;
+}
+
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .produk-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kategori-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media (max-width: 650px) {
+
+    header {
+        height: 65px;
+
+        padding: 0 18px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .cart-btn {
+        padding: 9px 11px;
+
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 500px;
+
+        padding: 60px 22px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .kategori,
+    .produk,
+    .tentang {
+        padding: 65px 20px;
+    }
+
+    .kategori-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .produk-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+    }
+
+    .produk-image {
+        height: 145px;
+
+        font-size: 50px;
+    }
+
+    .produk-info {
+        padding: 15px;
+    }
+
+    .produk-info h3 {
+        font-size: 15px;
+    }
+
+    .harga {
+        font-size: 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .produk-container {
+        grid-template-columns: 1fr;
+    }
+
+    .kategori-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* =========================
+   CHECKOUT FORM
+========================= */
+
+.checkout-form {
+    margin-top: 30px;
+}
+
+.checkout-form h3 {
+    margin-bottom: 15px;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+    width: 100%;
+
+    border: 1px solid #dbe1ea;
+
+    border-radius: 9px;
+
+    padding: 13px 15px;
+
+    margin-bottom: 12px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    resize: vertical;
+}
+
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
